@@ -20,7 +20,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			nid.uFlags = NIF_ICON | NIF_MESSAGE | NIF_TIP;
 			nid.uCallbackMessage = WM_SYSICON;
 			nid.hIcon = LoadIcon(NULL, IDI_APPLICATION);
-			lstrcpy(nid.szTip, "Espresso");
+			lstrcpy(nid.szTip, "Expresso");
 
 			Shell_NotifyIcon(NIM_ADD, &nid);
 		break;
@@ -89,14 +89,14 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	wc.lpfnWndProc = WindowProc;
 	wc.hInstance = NULL;
-	wc.lpszClassName = TEXT("Espresso");
+	wc.lpszClassName = TEXT("Expresso");
 
 	RegisterClass(&wc);
 
 	hwnd = CreateWindowEx(
 	    0,
 		wc.lpszClassName,
-		TEXT("Espresso"),
+		TEXT("Expresso"),
 		WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
 		NULL,
